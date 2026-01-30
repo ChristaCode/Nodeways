@@ -1,6 +1,6 @@
-# French Grammar Brain Map
+# Nodeways
 
-An interactive visualization of French grammar concepts organized by CEFR levels (A1-C2). Track your learning progress as you master each concept.
+**Your learning map.** An interactive visualization of language concepts (grammar, vocabulary, listening, reading, culture) organized by CEFR levels (A1–C2). Track your progress as you master each node.
 
 ## Features
 

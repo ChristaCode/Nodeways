@@ -89,7 +89,10 @@ function BrainMapPage() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🇫🇷 Learn French</h1>
+        <div className="header-brand">
+          <h1>Nodeways</h1>
+          <span className="header-tagline">Your learning map</span>
+        </div>
         <div className="domain-tabs">
           {LEARNING_DOMAINS.map(d => (
             <button
