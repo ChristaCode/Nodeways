@@ -17,10 +17,15 @@ const BrainMap = ({ graphData, selectedNode, onNodeClick, onNodeHover, selectedC
 
   useEffect(() => {
     if (fgRef.current) {
-      // Tighter layout: less repulsion and shorter links so the graph stays coherent
-      fgRef.current.d3Force('charge').strength(-280);
-      fgRef.current.d3Force('link').distance(95);
-      fgRef.current.d3Force('link').strength(0.85);
+      // Tighter layout: less repulsion, shorter links, and stronger center pull so edge nodes stay in
+      fgRef.current.d3Force('charge').strength(-240);
+      fgRef.current.d3Force('link').distance(85);
+      fgRef.current.d3Force('link').strength(0.9);
+      // Pull nodes toward the center so far-edge nodes don't drift out
+      const center = fgRef.current.d3Force('center');
+      if (center && typeof center.strength === 'function') {
+        center.strength(0.35);
+      }
     }
   }, []);
 
