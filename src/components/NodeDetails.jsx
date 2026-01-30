@@ -44,9 +44,9 @@ const NodeDetails = ({ node, graphData, onLearn, onUnlearn, onStartLesson, onSel
         </ul>
         {showNext && (
           <>
-            <h4 className="getting-started-next-title">Next up (prerequisites done)</h4>
+            <h4 className="getting-started-next-title">Suggested next lessons</h4>
             <ul className="start-nodes-list next-nodes">
-              {nextNodes.filter(n => !startNodes.find(s => s.id === n.id)).slice(0, 4).map(n => (
+              {nextNodes.filter(n => !startNodes.find(s => s.id === n.id)).slice(0, 5).map(n => (
                 <li key={n.id} className="start-node-item">
                   <button
                     type="button"
@@ -220,6 +220,46 @@ const NodeDetails = ({ node, graphData, onLearn, onUnlearn, onStartLesson, onSel
         >
           {completed ? '✓ Completed' : canLearn ? 'Mark as Learned' : 'Complete Prerequisites First'}
         </button>
+
+        {/* Suggested next lessons: nodes with prerequisites met, not completed, excluding current */}
+        {(() => {
+          const suggested = getRecommendedNextNodes(graphData?.nodes ?? [], progress, 6)
+            .filter(n => n.id !== node.id)
+            .slice(0, 5);
+          if (suggested.length === 0) return null;
+          return (
+            <div className="suggested-next-section">
+              <h4 className="suggested-next-title">Suggested next lessons</h4>
+              <p className="suggested-next-subtitle">You've met the prerequisites for these. Pick one to continue.</p>
+              <ul className="suggested-next-list">
+                {suggested.map(n => (
+                  <li key={n.id} className="suggested-next-item">
+                    <button
+                      type="button"
+                      className="suggested-next-select"
+                      onClick={() => onSelectNode?.(n)}
+                    >
+                      <span className="suggested-next-label">{n.label}</span>
+                      <span className={`cefr-badge small ${(n.cefrLevel || 'A1').toLowerCase()}`}>
+                        {n.cefrLevel || 'A1'}
+                      </span>
+                    </button>
+                    {hasLesson(n.id) && (
+                      <button
+                        type="button"
+                        className="suggested-next-lesson"
+                        onClick={() => onStartLesson?.(n.id)}
+                        title="Start lesson"
+                      >
+                        📚 Lesson
+                      </button>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );

@@ -537,6 +537,84 @@
   margin-bottom: 0;
 }
 
+/* Suggested next lessons (when a node is selected) */
+.suggested-next-section {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.suggested-next-title {
+  font-size: 1rem;
+  color: #334155;
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+}
+
+.suggested-next-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+
+.suggested-next-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggested-next-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.suggested-next-select {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #334155;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.suggested-next-select:hover {
+  background: #f1f5f9;
+  border-color: #667eea;
+}
+
+.suggested-next-label {
+  flex: 1;
+  font-weight: 500;
+}
+
+.suggested-next-lesson {
+  flex-shrink: 0;
+  padding: 0.35rem 0.6rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.suggested-next-lesson:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 1rem;

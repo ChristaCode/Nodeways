@@ -57,6 +57,19 @@ export const lessons = {
         options: ["le", "la", "les", "un"],
         correct: 1,
         explanation: "La maison is correct. Maison is feminine, so it takes 'la'."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which word is a noun?",
+        options: ["parler", "très", "la table", "oui"],
+        correct: 2,
+        explanation: "La table (the table) is a noun. Parler is a verb, très is an adverb."
+      },
+      {
+        type: "fill_blank",
+        question: "___ voiture (the car)",
+        answer: "La",
+        explanation: "La voiture—voiture is feminine, so use 'la'."
       }
     ]
   },
@@ -121,6 +134,19 @@ export const lessons = {
         options: ["Masculine", "Feminine"],
         correct: 0,
         explanation: "Le café is masculine. Remember: le café, not la café."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which article goes with 'fille' (girl)?",
+        options: ["le", "la", "un", "les"],
+        correct: 1,
+        explanation: "La fille is correct. Fille is feminine."
+      },
+      {
+        type: "fill_blank",
+        question: "___ garçon (the boy)",
+        answer: "Le",
+        explanation: "Le garçon—garçon is masculine."
       }
     ]
   },
@@ -190,6 +216,19 @@ export const lessons = {
         question: "Complete: J'ai deux ___ (I have two cats)",
         answer: "chats",
         explanation: "Chats is the plural of chat. Add -s for plural."
+      },
+      {
+        type: "multiple_choice",
+        question: "What article do you use for plural nouns?",
+        options: ["le", "la", "les", "un"],
+        correct: 2,
+        explanation: "Les is used for all plurals (both genders)."
+      },
+      {
+        type: "fill_blank",
+        question: "The plural of la table is les ___",
+        answer: "tables",
+        explanation: "Add -s: les tables."
       }
     ]
   },
@@ -254,6 +293,19 @@ export const lessons = {
         question: "Complete: J'aime ___ chocolat (I like chocolate)",
         answer: "le",
         explanation: "Use 'le' for general concepts like 'chocolate'."
+      },
+      {
+        type: "multiple_choice",
+        question: "___ enfants (the children)",
+        options: ["le", "la", "les", "des"],
+        correct: 2,
+        explanation: "Les enfants—plural uses 'les' for both genders."
+      },
+      {
+        type: "fill_blank",
+        question: "___ garçon (the boy)",
+        answer: "Le",
+        explanation: "Le garçon—garçon is masculine singular."
       }
     ]
   },
@@ -320,6 +372,19 @@ export const lessons = {
         question: "Complete: C'est ___ table (It's a table)",
         answer: "une",
         explanation: "Une table is correct. Table is feminine, so use 'une'."
+      },
+      {
+        type: "multiple_choice",
+        question: "J'ai ___ amis (I have some friends)",
+        options: ["un", "une", "des", "les"],
+        correct: 2,
+        explanation: "Des is the plural indefinite article (some)."
+      },
+      {
+        type: "fill_blank",
+        question: "C'est ___ fille (It's a girl)",
+        answer: "une",
+        explanation: "Une fille—fille is feminine, so use 'une'."
       }
     ]
   },
@@ -390,6 +455,20 @@ export const lessons = {
         question: "Complete: ___ suis étudiant (I am a student)",
         answer: "Je",
         explanation: "Je means 'I'. It becomes 'j'' before vowels: j'aime."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which pronoun means 'they' (all feminine)?",
+        options: ["ils", "elles", "nous", "vous"],
+        correct: 1,
+        explanation: "Elles = they (feminine only). Ils = they (masculine or mixed)."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which pronoun do you use for 'he'?",
+        options: ["elle", "il", "je", "tu"],
+        correct: 1,
+        explanation: "Il = he (or it for masculine things)."
       }
     ]
   },
@@ -453,6 +532,26 @@ export const lessons = {
         options: ["le livre", "parler", "la table", "un chat"],
         correct: 1,
         explanation: "Parler (to speak) is a verb. The others are nouns."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which verb means 'to be'?",
+        options: ["avoir", "être", "aller", "parler"],
+        correct: 1,
+        explanation: "Être = to be. Avoir = to have, aller = to go."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which verb means 'to have'?",
+        options: ["être", "avoir", "aimer", "manger"],
+        correct: 1,
+        explanation: "Avoir = to have. Être = to be."
+      },
+      {
+        type: "fill_blank",
+        question: "The infinitive form of 'to like/love' in French is ___",
+        answer: "aimer",
+        explanation: "Aimer = to like/love. It's a regular -er verb."
       }
     ]
   },
@@ -521,6 +620,19 @@ export const lessons = {
         options: ["je parle", "tu parles", "nous parlons", "vous parlez"],
         correct: 2,
         explanation: "Nous parlons is correct. Nous uses the -ons ending."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Il ___ anglais (He speaks English)",
+        answer: "parle",
+        explanation: "Il/elle parle uses the -e ending for third person singular."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which ending goes with 'vous' for -er verbs?",
+        options: ["-e", "-es", "-ons", "-ez"],
+        correct: 3,
+        explanation: "Vous parlez uses the -ez ending."
       }
     ]
   },
@@ -593,6 +705,19 @@ export const lessons = {
         question: "Complete: Nous ___ à Paris (We live in Paris)",
         answer: "habitons",
         explanation: "Nous habitons uses the -ons ending for 'nous'."
+      },
+      {
+        type: "multiple_choice",
+        question: "How do you say 'they like' (ils/elles)?",
+        options: ["ils aime", "ils aiment", "ils aimons", "ils aimez"],
+        correct: 1,
+        explanation: "Ils/elles aiment uses the -ent ending (silent)."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Tu ___ la télé (You watch TV)",
+        answer: "regardes",
+        explanation: "Tu regardes uses the -es ending for 'tu'."
       }
     ]
   },
@@ -665,6 +790,19 @@ export const lessons = {
         options: ["je suis", "j'ai", "je vais", "je parle"],
         correct: 0,
         explanation: "Je suis means 'I am'. It's the present tense of être."
+      },
+      {
+        type: "multiple_choice",
+        question: "How do you say 'I have'?",
+        options: ["je suis", "j'ai", "je vais", "je parle"],
+        correct: 1,
+        explanation: "J'ai means 'I have'. It's the present tense of avoir."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Nous ___ français (We are French)",
+        answer: "sommes",
+        explanation: "Nous sommes = we are. Present tense of être."
       }
     ]
   },
@@ -733,6 +871,19 @@ export const lessons = {
         question: "Complete: Je veux ___ (I want to speak)",
         answer: "parler",
         explanation: "After 'vouloir', use the infinitive form 'parler'."
+      },
+      {
+        type: "multiple_choice",
+        question: "After 'aimer' (to like), you use:",
+        options: ["a conjugated verb", "the infinitive", "an adjective", "pas"],
+        correct: 1,
+        explanation: "J'aime parler = I like to speak. After aimer, use the infinitive."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Je vais ___ (I'm going to study)",
+        answer: "étudier",
+        explanation: "After 'aller' (going to), use the infinitive: étudier."
       }
     ]
   },
@@ -805,6 +956,19 @@ export const lessons = {
         question: "Complete: ___ suis français (I am French)",
         answer: "Je",
         explanation: "Je is the subject pronoun. The order is Subject (Je) + Verb (suis) + Adjective (français)."
+      },
+      {
+        type: "multiple_choice",
+        question: "In French, where do most adjectives go?",
+        options: ["Before the noun", "After the noun", "At the start of the sentence", "After the verb only"],
+        correct: 1,
+        explanation: "Most adjectives come after the noun: une voiture rouge (a red car)."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Il ___ à Paris (He lives in Paris)",
+        answer: "habite",
+        explanation: "Subject (Il) + Verb (habite) + rest of sentence. Habiter = to live."
       }
     ]
   },
@@ -879,6 +1043,19 @@ export const lessons = {
         options: ["Je n'aime", "Je n'aime pas", "Je pas aime", "Je aime ne pas"],
         correct: 1,
         explanation: "Je n'aime pas is correct. Ne becomes n' before vowels, and pas comes after the verb."
+      },
+      {
+        type: "multiple_choice",
+        question: "How do you say 'He is not here'?",
+        options: ["Il ne est pas là", "Il n'est pas là", "Il est ne pas là", "Il est pas là"],
+        correct: 1,
+        explanation: "Il n'est pas là. Ne becomes n' before the vowel in 'est'."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Nous ___ travaillons ___ (We don't work)",
+        answer: "ne pas",
+        explanation: "Nous ne travaillons pas. Ne before verb, pas after."
       }
     ]
   },
@@ -954,6 +1131,19 @@ export const lessons = {
         question: "Complete: ___ étudiant (the student)",
         answer: "L'",
         explanation: "L'étudiant is correct. Le becomes l' before vowels."
+      },
+      {
+        type: "multiple_choice",
+        question: "Which is correct before 'anglais'?",
+        options: ["de anglais", "d'anglais", "de l'anglais", "de le anglais"],
+        correct: 1,
+        explanation: "De becomes d' before vowels: d'anglais (of English)."
+      },
+      {
+        type: "fill_blank",
+        question: "Complete: Il ___ aime pas (He doesn't like)",
+        answer: "n'",
+        explanation: "Ne becomes n' before a vowel: Il n'aime pas."
       }
     ]
   },
@@ -978,7 +1168,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "fill_blank", question: "Je ___ français (I speak French)", answer: "parle", explanation: "Je parle = I speak. Je takes -e." },
-      { type: "multiple_choice", question: "How do you say 'we speak'?", options: ["je parle", "tu parles", "nous parlons", "ils parlent"], correct: 2, explanation: "Nous parlons = we speak." }
+      { type: "multiple_choice", question: "How do you say 'we speak'?", options: ["je parle", "tu parles", "nous parlons", "ils parlent"], correct: 2, explanation: "Nous parlons = we speak." },
+      { type: "fill_blank", question: "Tu ___ le café (You like coffee)", answer: "aimes", explanation: "Tu aimes uses the -es ending for tu." },
+      { type: "multiple_choice", question: "Which ending is for 'il/elle' with -er verbs?", options: ["-e", "-es", "-ons", "-ent"], correct: 0, explanation: "Il/elle parle—third person singular takes -e." }
     ]
   },
   present_tense_ir: {
@@ -998,7 +1190,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "fill_blank", question: "Tu ___ (You finish)", answer: "finis", explanation: "Tu finis uses the -is ending." },
-      { type: "multiple_choice", question: "How do you say 'they finish'?", options: ["ils finit", "ils finissent", "ils finissons", "ils finis"], correct: 1, explanation: "Ils finissent = they finish." }
+      { type: "multiple_choice", question: "How do you say 'they finish'?", options: ["ils finit", "ils finissent", "ils finissons", "ils finis"], correct: 1, explanation: "Ils finissent = they finish." },
+      { type: "fill_blank", question: "Nous ___ (We finish)", answer: "finissons", explanation: "Nous finissons uses the -issons ending." },
+      { type: "multiple_choice", question: "Which -ir verb ending is for 'je' and 'tu'?", options: ["-is", "-it", "-issons", "-issent"], correct: 0, explanation: "Je finis, tu finis—both use -is." }
     ]
   },
   present_tense_etre_avoir: {
@@ -1027,7 +1221,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "How do you say 'I am'?", options: ["je suis", "j'ai", "je vais", "je parle"], correct: 0, explanation: "Je suis = I am." },
-      { type: "multiple_choice", question: "How do you say 'he has'?", options: ["il est", "il a", "il ont", "il as"], correct: 1, explanation: "Il a = he has." }
+      { type: "multiple_choice", question: "How do you say 'he has'?", options: ["il est", "il a", "il ont", "il as"], correct: 1, explanation: "Il a = he has." },
+      { type: "fill_blank", question: "Nous ___ français (We are French)", answer: "sommes", explanation: "Nous sommes = we are (être)." },
+      { type: "multiple_choice", question: "How do you say 'they have'?", options: ["ils sont", "ils ont", "ils avons", "ils avez"], correct: 1, explanation: "Ils ont = they have (avoir)." }
     ]
   },
   definite_articles_forms: {
@@ -1046,7 +1242,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "___ table (the table)", options: ["le", "la", "les"], correct: 1, explanation: "La table—table is feminine." },
-      { type: "fill_blank", question: "___ chat (the cat)", answer: "le", explanation: "Le chat—chat is masculine." }
+      { type: "fill_blank", question: "___ chat (the cat)", answer: "le", explanation: "Le chat—chat is masculine." },
+      { type: "multiple_choice", question: "___ livres (the books)", options: ["le", "la", "les"], correct: 2, explanation: "Les livres—plural uses les for both genders." },
+      { type: "fill_blank", question: "___ voiture (the car)", answer: "la", explanation: "La voiture—voiture is feminine." }
     ]
   },
   definite_articles_usage: {
@@ -1064,7 +1262,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "fill_blank", question: "J'aime ___ chocolat (I like chocolate)", answer: "le", explanation: "General concepts use le/la/les." },
-      { type: "multiple_choice", question: "How do you say 'I love music'?", options: ["J'aime musique", "J'aime la musique", "J'aime le musique"], correct: 1, explanation: "La musique—music is feminine, and the article is required." }
+      { type: "multiple_choice", question: "How do you say 'I love music'?", options: ["J'aime musique", "J'aime la musique", "J'aime le musique"], correct: 1, explanation: "La musique—music is feminine, and the article is required." },
+      { type: "fill_blank", question: "___ français est difficile (French is difficult)", answer: "Le", explanation: "Languages take the definite article: le français." },
+      { type: "multiple_choice", question: "Which is correct?", options: ["J'aime café", "J'aime le café", "J'aime un café"], correct: 1, explanation: "General preference: J'aime le café (I like coffee)." }
     ]
   },
   subject_pronouns_list: {
@@ -1083,7 +1283,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "Which means 'we'?", options: ["je", "tu", "nous", "vous"], correct: 2, explanation: "Nous = we." },
-      { type: "multiple_choice", question: "Which means 'she'?", options: ["il", "elle", "ils", "elles"], correct: 1, explanation: "Elle = she." }
+      { type: "multiple_choice", question: "Which means 'she'?", options: ["il", "elle", "ils", "elles"], correct: 1, explanation: "Elle = she." },
+      { type: "fill_blank", question: "___ parle français (I speak French)", answer: "Je", explanation: "Je = I. Before a vowel it becomes j': j'aime." },
+      { type: "multiple_choice", question: "Which means 'they' (mixed or masculine)?", options: ["elles", "ils", "nous", "vous"], correct: 1, explanation: "Ils = they (masculine or mixed). Elles = they (feminine only)." }
     ]
   },
   subject_pronouns_tu_vous: {
@@ -1098,7 +1300,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "To address a stranger politely, you use:", options: ["tu", "vous"], correct: 1, explanation: "Vous is formal and polite." },
-      { type: "multiple_choice", question: "To say 'you all' (multiple people), you use:", options: ["tu", "vous"], correct: 1, explanation: "Vous is also the plural you." }
+      { type: "multiple_choice", question: "To say 'you all' (multiple people), you use:", options: ["tu", "vous"], correct: 1, explanation: "Vous is also the plural you." },
+      { type: "multiple_choice", question: "With friends and family, you typically use:", options: ["tu", "vous"], correct: 0, explanation: "Tu is informal—used with friends and family." },
+      { type: "multiple_choice", question: "When in doubt about tu vs vous, use:", options: ["tu", "vous"], correct: 1, explanation: "When in doubt, use vous—it's safer and more polite." }
     ]
   },
   negation_ne_pas: {
@@ -1116,7 +1320,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "fill_blank", question: "Je ___ parle ___ (I don't speak)", answer: "ne pas", explanation: "Ne before verb, pas after." },
-      { type: "multiple_choice", question: "How do you say 'I don't like'?", options: ["Je n'aime", "Je n'aime pas", "Je pas aime"], correct: 1, explanation: "Je n'aime pas—ne becomes n' before the vowel." }
+      { type: "multiple_choice", question: "How do you say 'I don't like'?", options: ["Je n'aime", "Je n'aime pas", "Je pas aime"], correct: 1, explanation: "Je n'aime pas—ne becomes n' before the vowel." },
+      { type: "multiple_choice", question: "Where does 'pas' go?", options: ["Before the verb", "After the verb", "At the start of the sentence"], correct: 1, explanation: "Ne + verb + pas. Pas comes after the verb." },
+      { type: "fill_blank", question: "Il ___ est ___ là (He is not here)", answer: "n' pas", explanation: "Il n'est pas là. Ne becomes n' before a vowel." }
     ]
   },
   negation_jamais_rien: {
@@ -1139,7 +1345,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "How do you say 'never'?", options: ["ne...pas", "ne...jamais", "ne...rien"], correct: 1, explanation: "Ne...jamais = never." },
-      { type: "multiple_choice", question: "How do you say 'I see nothing'?", options: ["Je ne vois pas", "Je ne vois rien", "Je vois rien"], correct: 1, explanation: "Je ne vois rien = I see nothing." }
+      { type: "multiple_choice", question: "How do you say 'I see nothing'?", options: ["Je ne vois pas", "Je ne vois rien", "Je vois rien"], correct: 1, explanation: "Je ne vois rien = I see nothing." },
+      { type: "fill_blank", question: "Je ne mange ___ (I never eat)", answer: "jamais", explanation: "Ne...jamais = never. Je ne mange jamais." },
+      { type: "multiple_choice", question: "What structure is used for 'no longer'?", options: ["ne...plus", "ne...jamais", "ne...rien"], correct: 0, explanation: "Ne...plus = no longer. J'ai plus de café = I have no more coffee." }
     ]
   },
   nouns_basics: {
@@ -1158,7 +1366,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "Which is a noun?", options: ["parler", "le livre", "très", "oui"], correct: 1, explanation: "Le livre (the book) is a noun." },
-      { type: "multiple_choice", question: "Every French noun has:", options: ["number only", "gender only", "gender and number", "neither"], correct: 2, explanation: "Nouns have gender (m/f) and number (singular/plural)." }
+      { type: "multiple_choice", question: "Every French noun has:", options: ["number only", "gender only", "gender and number", "neither"], correct: 2, explanation: "Nouns have gender (m/f) and number (singular/plural)." },
+      { type: "multiple_choice", question: "Which word names a thing?", options: ["aimer", "la table", "très", "oui"], correct: 1, explanation: "La table (the table) is a noun—it names a thing." },
+      { type: "fill_blank", question: "Articles and adjectives must agree with the noun's ___", answer: "gender", explanation: "Gender affects le/la, un/une, and adjective forms." }
     ]
   },
   nouns_gender_intro: {
@@ -1177,7 +1387,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "multiple_choice", question: "La voiture is:", options: ["masculine", "feminine"], correct: 1, explanation: "La = feminine." },
-      { type: "multiple_choice", question: "Which article goes with 'livre' (book)?", options: ["la", "le", "les"], correct: 1, explanation: "Le livre—livre is masculine." }
+      { type: "multiple_choice", question: "Which article goes with 'livre' (book)?", options: ["la", "le", "les"], correct: 1, explanation: "Le livre—livre is masculine." },
+      { type: "multiple_choice", question: "Le café (coffee) is:", options: ["masculine", "feminine"], correct: 0, explanation: "Le = masculine. Le café." },
+      { type: "fill_blank", question: "The best way to remember noun gender is to learn each noun with its ___ (le/la)", answer: "article", explanation: "Always learn nouns with their article to remember gender." }
     ]
   },
   gender_le_la: {
@@ -1196,7 +1408,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "fill_blank", question: "___ garçon (the boy)", answer: "Le", explanation: "Garçon is masculine." },
-      { type: "multiple_choice", question: "___ amie (the friend - female)", options: ["le", "la", "l'"], correct: 2, explanation: "Before a vowel we use l': l'amie." }
+      { type: "multiple_choice", question: "___ amie (the friend - female)", options: ["le", "la", "l'"], correct: 2, explanation: "Before a vowel we use l': l'amie." },
+      { type: "multiple_choice", question: "___ table (the table)", options: ["le", "la", "l'"], correct: 1, explanation: "La table—table is feminine and doesn't start with a vowel." },
+      { type: "fill_blank", question: "___ ami (the friend - male, before vowel)", answer: "L'", explanation: "L'ami—le becomes l' before a vowel." }
     ]
   },
   number_plural_s: {
@@ -1215,7 +1429,9 @@ export const lessons = {
     ],
     exercises: [
       { type: "fill_blank", question: "The plural of le chat is les ___", answer: "chats", explanation: "Add -s: les chats." },
-      { type: "multiple_choice", question: "What article do you use for plural nouns?", options: ["le", "la", "les"], correct: 2, explanation: "Les is used for all plurals." }
+      { type: "multiple_choice", question: "What article do you use for plural nouns?", options: ["le", "la", "les"], correct: 2, explanation: "Les is used for all plurals." },
+      { type: "fill_blank", question: "The plural of la table is les ___", answer: "tables", explanation: "Add -s: les tables." },
+      { type: "multiple_choice", question: "How do most French nouns form the plural?", options: ["Add -x", "Add -s", "Add -aux", "No change"], correct: 1, explanation: "Most nouns add -s for plural, just like in English." }
     ]
   }
 };
