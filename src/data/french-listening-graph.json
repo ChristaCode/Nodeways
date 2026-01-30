@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    { "id": "listen_phonics", "label": "Sounds & phonics", "category": "listening", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": [], "description": "French sounds, liaisons, and basic pronunciation." },
+    { "id": "listen_phrases_a1", "label": "A1: Simple phrases", "category": "listening", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": ["listen_phonics"], "description": "Slow, clear speech: greetings, numbers, and short sentences." },
+    { "id": "listen_dialogues_a2", "label": "A2: Short dialogues", "category": "listening", "difficulty": 2, "learning_priority": 2, "core_node": false, "high_confusion_node": false, "prerequisites": ["listen_phrases_a1"], "description": "Everyday conversations and simple announcements." },
+    { "id": "listen_media_b1", "label": "B1: Radio & clips", "category": "listening", "difficulty": 3, "learning_priority": 3, "core_node": false, "high_confusion_node": false, "prerequisites": ["listen_dialogues_a2"], "description": "Podcasts, news clips, and standard-speed speech." },
+    { "id": "listen_native_b2", "label": "B2: Native & variety", "category": "listening", "difficulty": 4, "learning_priority": 4, "core_node": false, "high_confusion_node": false, "prerequisites": ["listen_media_b1"], "description": "Films, accents, and natural conversation." }
+  ],
+  "edges": [
+    { "from": "listen_phonics", "to": "listen_phrases_a1", "relationship": "enables" },
+    { "from": "listen_phrases_a1", "to": "listen_dialogues_a2", "relationship": "enables" },
+    { "from": "listen_dialogues_a2", "to": "listen_media_b1", "relationship": "enables" },
+    { "from": "listen_media_b1", "to": "listen_native_b2", "relationship": "enables" }
+  ]
+}

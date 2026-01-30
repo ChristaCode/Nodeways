@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    { "id": "culture_basics", "label": "French basics", "category": "culture", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": [], "description": "Tu vs vous, politeness, and everyday customs." },
+    { "id": "culture_regions", "label": "Regions & identity", "category": "culture", "difficulty": 1, "learning_priority": 2, "core_node": false, "high_confusion_node": false, "prerequisites": ["culture_basics"], "description": "Regions, languages, and French identity." },
+    { "id": "culture_food_customs", "label": "Food & table", "category": "culture", "difficulty": 2, "learning_priority": 2, "core_node": false, "high_confusion_node": false, "prerequisites": ["culture_basics"], "description": "Meals, table manners, and food culture." },
+    { "id": "culture_festivals", "label": "Festivals & calendar", "category": "culture", "difficulty": 2, "learning_priority": 3, "core_node": false, "high_confusion_node": false, "prerequisites": ["culture_regions"], "description": "Holidays, festivals, and celebrations." },
+    { "id": "culture_arts", "label": "Arts & media", "category": "culture", "difficulty": 3, "learning_priority": 3, "core_node": false, "high_confusion_node": false, "prerequisites": ["culture_festivals", "culture_food_customs"], "description": "Film, music, and cultural references." },
+    { "id": "culture_debate", "label": "Society & debate", "category": "culture", "difficulty": 4, "learning_priority": 4, "core_node": false, "high_confusion_node": false, "prerequisites": ["culture_arts"], "description": "Current affairs, values, and discussion." }
+  ],
+  "edges": [
+    { "from": "culture_basics", "to": "culture_regions", "relationship": "enables" },
+    { "from": "culture_basics", "to": "culture_food_customs", "relationship": "enables" },
+    { "from": "culture_regions", "to": "culture_festivals", "relationship": "enables" },
+    { "from": "culture_festivals", "to": "culture_arts", "relationship": "enables" },
+    { "from": "culture_food_customs", "to": "culture_arts", "relationship": "enables" },
+    { "from": "culture_arts", "to": "culture_debate", "relationship": "enables" }
+  ]
+}

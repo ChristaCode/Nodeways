@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    { "id": "read_alphabet", "label": "Letters & words", "category": "reading", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": [], "description": "Recognizing letters, common words, and short sentences." },
+    { "id": "read_short_a1", "label": "A1: Short texts", "category": "reading", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": ["read_alphabet"], "description": "Signs, labels, and simple paragraphs." },
+    { "id": "read_stories_a2", "label": "A2: Simple stories", "category": "reading", "difficulty": 2, "learning_priority": 2, "core_node": false, "high_confusion_node": false, "prerequisites": ["read_short_a1"], "description": "Short narratives and everyday texts." },
+    { "id": "read_articles_b1", "label": "B1: Articles & blogs", "category": "reading", "difficulty": 3, "learning_priority": 3, "core_node": false, "high_confusion_node": false, "prerequisites": ["read_stories_a2"], "description": "News, blogs, and structured texts." },
+    { "id": "read_literature_b2", "label": "B2: Literature & nuance", "category": "reading", "difficulty": 4, "learning_priority": 4, "core_node": false, "high_confusion_node": false, "prerequisites": ["read_articles_b1"], "description": "Novels, essays, and complex texts." }
+  ],
+  "edges": [
+    { "from": "read_alphabet", "to": "read_short_a1", "relationship": "enables" },
+    { "from": "read_short_a1", "to": "read_stories_a2", "relationship": "enables" },
+    { "from": "read_stories_a2", "to": "read_articles_b1", "relationship": "enables" },
+    { "from": "read_articles_b1", "to": "read_literature_b2", "relationship": "enables" }
+  ]
+}

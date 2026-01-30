@@ -1,0 +1,563 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.domain-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.domain-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  background: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.domain-tab:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.domain-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.domain-tab-icon {
+  font-size: 1.1rem;
+}
+
+.domain-tab-label {
+  white-space: nowrap;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* CEFR level progress in header */
+.progress-by-level {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.level-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 80px;
+}
+
+.level-progress-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  width: 1.75rem;
+  flex-shrink: 0;
+}
+
+.level-progress-bar-wrap {
+  flex: 1;
+  min-width: 40px;
+  max-width: 80px;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.level-progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.level-progress-count {
+  font-size: 0.7rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.cefr-filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cefr-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cefr-button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.cefr-button.active {
+  background: #667eea;
+  color: white;
+}
+
+.progress-info {
+  margin-left: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.progress-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.control-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.control-button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.import-button {
+  display: inline-block;
+  text-align: center;
+}
+
+.clear-button {
+  border-color: #e53935;
+  color: #e53935;
+}
+
+.clear-button:hover {
+  background: #e53935;
+  color: white;
+}
+
+.progress-stat {
+  text-align: center;
+}
+
+.progress-stat-label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progress-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.brainmap-container {
+  flex: 1;
+  min-height: 60vh;
+  position: relative;
+  padding: 1rem;
+  background: linear-gradient(145deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.12) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.brainmap-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 420px;
+  border-radius: 12px;
+}
+
+.sidebar {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.back-to-start {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0;
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  color: #667eea;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.back-to-start:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.sidebar-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-header .cefr-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cefr-badge.a1 { background: #e3f2fd; color: #1976d2; }
+.cefr-badge.a2 { background: #c8e6c9; color: #388e3c; }
+.cefr-badge.b1 { background: #fff9c4; color: #f57c00; }
+.cefr-badge.b2 { background: #ffe0b2; color: #e65100; }
+.cefr-badge.c1 { background: #f8bbd0; color: #c2185b; }
+.cefr-badge.c2 { background: #ce93d8; color: #7b1fa2; }
+
+.node-details {
+  margin-bottom: 1.5rem;
+}
+
+.node-details h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.difficulty-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.difficulty-1 { background: #c8e6c9; color: #2e7d32; }
+.difficulty-2 { background: #fff9c4; color: #f57c00; }
+.difficulty-3 { background: #ffe0b2; color: #e65100; }
+.difficulty-4 { background: #f8bbd0; color: #c2185b; }
+.difficulty-5 { background: #ce93d8; color: #7b1fa2; }
+
+.node-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.prerequisites-list {
+  margin-top: 1rem;
+}
+
+.prerequisites-list h4 {
+  font-size: 0.875rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.prerequisite-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  color: #666;
+}
+
+.prerequisite-tag.completed {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.lesson-coming-soon {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.learn-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.learn-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.learn-button:active {
+  transform: translateY(0);
+}
+
+.learn-button.completed {
+  background: #4caf50;
+}
+
+.learn-button.completed:hover {
+  background: #45a049;
+}
+
+.lesson-button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.lesson-button:hover {
+  background: linear-gradient(135deg, #e081eb 0%, #e4465b 100%);
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+}
+
+.empty-state p {
+  margin-top: 1rem;
+}
+
+/* Getting started (no node selected) */
+.getting-started {
+  text-align: left;
+  padding: 0;
+}
+
+.getting-started-title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.35rem;
+}
+
+.getting-started-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.start-nodes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.start-node-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.start-node-select {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #334155;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.start-node-select:hover {
+  background: #f1f5f9;
+  border-color: #667eea;
+}
+
+.start-node-order {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.start-node-label {
+  flex: 1;
+  font-weight: 500;
+}
+
+.cefr-badge.small {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.65rem;
+}
+
+.start-node-lesson {
+  flex-shrink: 0;
+  padding: 0.4rem 0.6rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.start-node-lesson:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.getting-started-next-title {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 1rem 0 0.5rem;
+}
+
+.getting-started-hint {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progress-by-level {
+    width: 100%;
+  }
+
+  .level-progress-bar-wrap {
+    max-width: 120px;
+  }
+
+  .progress-info {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .sidebar {
+    position: absolute;
+    right: -350px;
+    height: 100%;
+    transition: right 0.3s ease;
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}

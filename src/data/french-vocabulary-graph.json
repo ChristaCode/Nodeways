@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    { "id": "vocab_greetings", "label": "Greetings & basics", "category": "vocabulary", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": [], "description": "Bonjour, merci, s'il vous plaît, and everyday polite phrases." },
+    { "id": "vocab_numbers", "label": "Numbers", "category": "vocabulary", "difficulty": 1, "learning_priority": 1, "core_node": true, "high_confusion_node": false, "prerequisites": [], "description": "Counting, dates, time, and basic numerals." },
+    { "id": "vocab_food", "label": "Food & drink", "category": "vocabulary", "difficulty": 1, "learning_priority": 2, "core_node": true, "high_confusion_node": false, "prerequisites": ["vocab_greetings"], "description": "Food, drinks, meals, and ordering." },
+    { "id": "vocab_family", "label": "Family & people", "category": "vocabulary", "difficulty": 1, "learning_priority": 2, "core_node": false, "high_confusion_node": false, "prerequisites": ["vocab_greetings"], "description": "Family members, describing people, and relationships." },
+    { "id": "vocab_travel", "label": "Travel & directions", "category": "vocabulary", "difficulty": 2, "learning_priority": 2, "core_node": false, "high_confusion_node": false, "prerequisites": ["vocab_numbers", "vocab_greetings"], "description": "Transport, directions, and travel phrases." },
+    { "id": "vocab_work", "label": "Work & studies", "category": "vocabulary", "difficulty": 2, "learning_priority": 3, "core_node": false, "high_confusion_node": false, "prerequisites": ["vocab_family", "vocab_greetings"], "description": "Jobs, school, and professional vocabulary." },
+    { "id": "vocab_media", "label": "Media & opinions", "category": "vocabulary", "difficulty": 3, "learning_priority": 3, "core_node": false, "high_confusion_node": false, "prerequisites": ["vocab_travel", "vocab_food"], "description": "Expressing opinions, news, and media." },
+    { "id": "vocab_abstract", "label": "Abstract & nuance", "category": "vocabulary", "difficulty": 4, "learning_priority": 4, "core_node": false, "high_confusion_node": false, "prerequisites": ["vocab_media", "vocab_work"], "description": "Idioms, nuance, and advanced expression." }
+  ],
+  "edges": [
+    { "from": "vocab_greetings", "to": "vocab_food", "relationship": "enables" },
+    { "from": "vocab_greetings", "to": "vocab_family", "relationship": "enables" },
+    { "from": "vocab_numbers", "to": "vocab_travel", "relationship": "enables" },
+    { "from": "vocab_greetings", "to": "vocab_travel", "relationship": "enables" },
+    { "from": "vocab_family", "to": "vocab_work", "relationship": "enables" },
+    { "from": "vocab_food", "to": "vocab_media", "relationship": "enables" },
+    { "from": "vocab_travel", "to": "vocab_media", "relationship": "enables" },
+    { "from": "vocab_work", "to": "vocab_abstract", "relationship": "enables" },
+    { "from": "vocab_media", "to": "vocab_abstract", "relationship": "enables" }
+  ]
+}

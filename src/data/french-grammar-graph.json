@@ -1,0 +1,1455 @@
+{
+  "nodes": [
+    {
+      "id": "nouns",
+      "label": "Nouns",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": [],
+      "description": "Words that name people, places, things, or ideas. Every French noun has a gender (masculine or feminine)."
+    },
+    {
+      "id": "gender",
+      "label": "Gender",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns"],
+      "description": "French nouns are either masculine or feminine. Gender affects articles, adjectives, and pronouns."
+    },
+    {
+      "id": "number",
+      "label": "Number (Singular/Plural)",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns"],
+      "description": "Nouns can be singular or plural. Plural formation usually adds -s, but has many exceptions."
+    },
+    {
+      "id": "definite_articles",
+      "label": "Definite Articles (le, la, les)",
+      "category": "articles",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns", "gender", "number"],
+      "description": "Used for specific or known nouns: le (masc. sing.), la (fem. sing.), les (plural)."
+    },
+    {
+      "id": "indefinite_articles",
+      "label": "Indefinite Articles (un, une, des)",
+      "category": "articles",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns", "gender", "number"],
+      "description": "Used for non-specific nouns: un (masc. sing.), une (fem. sing.), des (plural)."
+    },
+    {
+      "id": "partitive_articles",
+      "label": "Partitive Articles (du, de la, des)",
+      "category": "articles",
+      "difficulty": 2,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["definite_articles", "preposition_de"],
+      "description": "Used for uncountable quantities: du (masc.), de la (fem.), des (plural)."
+    },
+    {
+      "id": "subject_pronouns",
+      "label": "Subject Pronouns",
+      "category": "pronouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": [],
+      "description": "je, tu, il/elle, nous, vous, ils/elles - indicate who performs the action."
+    },
+    {
+      "id": "direct_object_pronouns",
+      "label": "Direct Object Pronouns",
+      "category": "pronouns",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["subject_pronouns", "word_order", "present_tense"],
+      "description": "me, te, le/la, nous, vous, les - replace direct objects and precede the verb."
+    },
+    {
+      "id": "indirect_object_pronouns",
+      "label": "Indirect Object Pronouns",
+      "category": "pronouns",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["direct_object_pronouns", "preposition_a"],
+      "description": "me, te, lui, nous, vous, leur - replace indirect objects (à + noun)."
+    },
+    {
+      "id": "reflexive_pronouns",
+      "label": "Reflexive Pronouns",
+      "category": "pronouns",
+      "difficulty": 2,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["subject_pronouns", "word_order"],
+      "description": "me, te, se, nous, vous, se - used with reflexive verbs where subject and object are the same."
+    },
+    {
+      "id": "relative_pronouns",
+      "label": "Relative Pronouns",
+      "category": "pronouns",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["sentence_structure", "questions", "direct_object_pronouns"],
+      "description": "qui, que, dont, où - connect clauses and refer back to a noun."
+    },
+    {
+      "id": "pronoun_y",
+      "label": "Pronoun 'y'",
+      "category": "pronouns",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["preposition_a", "direct_object_pronouns", "word_order"],
+      "description": "Replaces à + location or thing. Means 'there' or 'to it/them'."
+    },
+    {
+      "id": "pronoun_en",
+      "label": "Pronoun 'en'",
+      "category": "pronouns",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["preposition_de", "partitive_articles", "direct_object_pronouns", "word_order"],
+      "description": "Replaces de + noun or partitive articles. Means 'some' or 'of it/them'."
+    },
+    {
+      "id": "pronoun_order",
+      "label": "Pronoun Order",
+      "category": "syntax",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["direct_object_pronouns", "indirect_object_pronouns", "reflexive_pronouns"],
+      "description": "When multiple pronouns appear, they follow a specific order: me/te/nous/vous, le/la/les, lui/leur, y, en."
+    },
+    {
+      "id": "verbs",
+      "label": "Verbs",
+      "category": "verbs",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": [],
+      "description": "Words that express actions, states, or occurrences. Must agree with subject and be conjugated."
+    },
+    {
+      "id": "verb_conjugation",
+      "label": "Verb Conjugation",
+      "category": "verbs",
+      "difficulty": 2,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["verbs", "subject_pronouns"],
+      "description": "Changing verb endings to match the subject. French has three main groups: -er, -ir, -re."
+    },
+    {
+      "id": "regular_er_verbs",
+      "label": "Regular -er Verbs",
+      "category": "verbs",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["verb_conjugation", "present_tense"],
+      "description": "Most common verb group. Pattern: -e, -es, -e, -ons, -ez, -ent (present tense)."
+    },
+    {
+      "id": "regular_ir_verbs",
+      "label": "Regular -ir Verbs",
+      "category": "verbs",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["regular_er_verbs", "verb_conjugation"],
+      "description": "Second verb group. Pattern: -is, -is, -it, -issons, -issez, -issent (present tense)."
+    },
+    {
+      "id": "regular_re_verbs",
+      "label": "Regular -re Verbs",
+      "category": "verbs",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["regular_er_verbs", "verb_conjugation"],
+      "description": "Third verb group. Pattern: -s, -s, -, -ons, -ez, -ent (present tense)."
+    },
+    {
+      "id": "irregular_verbs",
+      "label": "Irregular Verbs",
+      "category": "verbs",
+      "difficulty": 3,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["regular_er_verbs", "present_tense"],
+      "description": "Verbs that don't follow standard patterns. Common ones: être, avoir, aller, faire, venir."
+    },
+    {
+      "id": "present_tense",
+      "label": "Present Tense",
+      "category": "tense",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["verb_conjugation", "subject_pronouns"],
+      "description": "Expresses current actions or general truths. First tense to learn."
+    },
+    {
+      "id": "passe_compose",
+      "label": "Passé Composé",
+      "category": "tense",
+      "difficulty": 3,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["present_tense", "auxiliary_verbs", "past_participle", "avoir_auxiliary"],
+      "description": "Compound past tense for completed actions. Formed with auxiliary + past participle."
+    },
+    {
+      "id": "imparfait",
+      "label": "Imparfait",
+      "category": "tense",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["present_tense", "passe_compose"],
+      "description": "Past tense for ongoing, habitual, or descriptive actions. Formed from present nous form."
+    },
+    {
+      "id": "future_simple",
+      "label": "Future Simple",
+      "category": "tense",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense", "infinitive", "futur_proche"],
+      "description": "Future tense for actions that will happen. Formed by adding endings to infinitive."
+    },
+    {
+      "id": "futur_proche",
+      "label": "Futur Proche",
+      "category": "tense",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense", "irregular_verbs", "infinitive"],
+      "description": "Near future: aller + infinitive. Expresses actions happening soon."
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "category": "mood",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["future_simple", "imparfait"],
+      "description": "Expresses hypothetical actions or polite requests. Formed like future with imparfait endings."
+    },
+    {
+      "id": "subjunctive",
+      "label": "Subjunctive",
+      "category": "mood",
+      "difficulty": 5,
+      "learning_priority": 5,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["present_tense", "imparfait", "conditional"],
+      "description": "Expresses doubt, emotion, necessity, or opinion. Used in dependent clauses."
+    },
+    {
+      "id": "imperative",
+      "label": "Imperative",
+      "category": "mood",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense", "subject_pronouns"],
+      "description": "Commands and requests. Uses tu, nous, vous forms without pronouns."
+    },
+    {
+      "id": "auxiliary_verbs",
+      "label": "Auxiliary Verbs",
+      "category": "verbs",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["irregular_verbs", "present_tense"],
+      "description": "être and avoir - used to form compound tenses. Most verbs use avoir; some use être."
+    },
+    {
+      "id": "etre_auxiliary",
+      "label": "Être as Auxiliary",
+      "category": "verbs",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["auxiliary_verbs", "reflexive_verbs", "gender_agreement", "number_agreement"],
+      "description": "Used with reflexive verbs and verbs of movement. Past participle agrees with subject."
+    },
+    {
+      "id": "avoir_auxiliary",
+      "label": "Avoir as Auxiliary",
+      "category": "verbs",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["auxiliary_verbs"],
+      "description": "Most common auxiliary. Past participle agrees with direct object when placed before verb."
+    },
+    {
+      "id": "past_participle",
+      "label": "Past Participle",
+      "category": "verbs",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["verb_conjugation", "regular_er_verbs"],
+      "description": "Verb form used in compound tenses. Must agree with subject (être) or object (avoir)."
+    },
+    {
+      "id": "reflexive_verbs",
+      "label": "Reflexive Verbs",
+      "category": "verbs",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["reflexive_pronouns", "present_tense", "word_order"],
+      "description": "Verbs where subject acts on itself. Always use être in passé composé."
+    },
+    {
+      "id": "adjectives",
+      "label": "Adjectives",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns", "gender", "number"],
+      "description": "Words that describe nouns. Must agree in gender and number with the noun."
+    },
+    {
+      "id": "adjective_agreement",
+      "label": "Adjective Agreement",
+      "category": "agreement",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["adjectives", "gender", "number"],
+      "description": "Adjectives change form to match noun's gender and number. Usually add -e (fem.) or -s (plural)."
+    },
+    {
+      "id": "adjective_placement",
+      "label": "Adjective Placement",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["adjectives", "adjective_agreement"],
+      "description": "Most adjectives follow the noun. Some common/short adjectives precede: beau, bon, grand, petit, etc."
+    },
+    {
+      "id": "gender_agreement",
+      "label": "Gender Agreement",
+      "category": "agreement",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["gender", "definite_articles", "adjectives"],
+      "description": "Articles, adjectives, and past participles must match the gender of the noun."
+    },
+    {
+      "id": "number_agreement",
+      "label": "Number Agreement",
+      "category": "agreement",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["number", "definite_articles", "subject_pronouns"],
+      "description": "Articles, adjectives, and verbs must match the number (singular/plural) of the noun/subject."
+    },
+    {
+      "id": "sentence_structure",
+      "label": "Sentence Structure",
+      "category": "syntax",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": [],
+      "description": "Basic word order: Subject + Verb + Object (SVO). More flexible than English."
+    },
+    {
+      "id": "word_order",
+      "label": "Word Order",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["sentence_structure", "present_tense"],
+      "description": "French word order changes with pronouns, questions, and emphasis. Pronouns come before verbs."
+    },
+    {
+      "id": "questions",
+      "label": "Questions",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["sentence_structure", "present_tense"],
+      "description": "Three ways: inversion (verb-subject), est-ce que, or rising intonation."
+    },
+    {
+      "id": "negation",
+      "label": "Negation",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["sentence_structure", "present_tense"],
+      "description": "Basic form: ne...pas around the verb. Other forms: ne...jamais, ne...rien, ne...personne."
+    },
+    {
+      "id": "negation_pronouns",
+      "label": "Negation with Pronouns",
+      "category": "syntax",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": true,
+      "prerequisites": ["negation", "passe_compose", "pronoun_order"],
+      "description": "In compound tenses, ne comes before auxiliary, pas after. Pronouns go between ne and verb."
+    },
+    {
+      "id": "prepositions",
+      "label": "Prepositions",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["sentence_structure", "nouns"],
+      "description": "Words showing relationships: à, de, dans, sur, avec, pour, etc. Many have multiple meanings."
+    },
+    {
+      "id": "preposition_a",
+      "label": "Preposition 'à'",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["prepositions"],
+      "description": "Means 'to', 'at', 'in'. Contracts with articles: au (à+le), aux (à+les)."
+    },
+    {
+      "id": "preposition_de",
+      "label": "Preposition 'de'",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["prepositions"],
+      "description": "Means 'of', 'from', 'about'. Contracts with articles: du (de+le), des (de+les)."
+    },
+    {
+      "id": "liaison",
+      "label": "Liaison",
+      "category": "pronunciation",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["elision", "definite_articles"],
+      "description": "Linking final consonant to following vowel sound. Required, optional, or forbidden depending on context."
+    },
+    {
+      "id": "elision",
+      "label": "Elision",
+      "category": "pronunciation",
+      "difficulty": 2,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["definite_articles", "subject_pronouns"],
+      "description": "Dropping vowel before another vowel: le → l', je → j', de → d'."
+    },
+    {
+      "id": "contractions",
+      "label": "Contractions",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["definite_articles", "preposition_a", "preposition_de"],
+      "description": "Articles combine with prepositions: à+le=au, à+les=aux, de+le=du, de+les=des."
+    },
+    {
+      "id": "infinitive",
+      "label": "Infinitive",
+      "category": "verbs",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["verbs"],
+      "description": "Base verb form ending in -er, -ir, -re. Used after prepositions and certain verbs."
+    },
+    {
+      "id": "gerund",
+      "label": "Gerund (en + present participle)",
+      "category": "verbs",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["participe_present", "preposition_de"],
+      "description": "Expresses simultaneous actions: en + verb-ant. 'While doing something'."
+    },
+    {
+      "id": "comparatives",
+      "label": "Comparatives",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["adjectives", "adverbs"],
+      "description": "Comparing things: plus...que (more than), moins...que (less than), aussi...que (as...as)."
+    },
+    {
+      "id": "superlatives",
+      "label": "Superlatives",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["comparatives", "definite_articles"],
+      "description": "Expressing the most/least: le/la/les plus... (most), le/la/les moins... (least)."
+    },
+    {
+      "id": "possessive_adjectives",
+      "label": "Possessive Adjectives",
+      "category": "articles",
+      "difficulty": 2,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns", "gender", "number"],
+      "description": "mon/ma/mes, ton/ta/tes, son/sa/ses, etc. Agree with the noun, not the owner."
+    },
+    {
+      "id": "demonstrative_adjectives",
+      "label": "Demonstrative Adjectives",
+      "category": "articles",
+      "difficulty": 2,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns", "gender", "number"],
+      "description": "ce/cet/cette/ces - 'this' or 'that'. Agree with the following noun."
+    },
+    {
+      "id": "interrogative_pronouns",
+      "label": "Interrogative Pronouns",
+      "category": "pronouns",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["questions", "subject_pronouns"],
+      "description": "qui (who), que (what), lequel (which) - used to ask questions."
+    },
+    {
+      "id": "indirect_questions",
+      "label": "Indirect Questions",
+      "category": "syntax",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["interrogative_pronouns", "questions", "sentence_structure"],
+      "description": "Questions within statements: je ne sais pas qui/que/comment/etc."
+    },
+    {
+      "id": "si_clauses",
+      "label": "Si Clauses (If-then)",
+      "category": "syntax",
+      "difficulty": 5,
+      "learning_priority": 5,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["conditional", "imparfait", "plus_que_parfait"],
+      "description": "Conditional sentences. Three types: present+future, imparfait+conditional, plus-que-parfait+conditional past."
+    },
+    {
+      "id": "passive_voice",
+      "label": "Passive Voice",
+      "category": "syntax",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["etre_auxiliary", "past_participle", "passe_compose"],
+      "description": "Formed with être + past participle. Less common than in English; often replaced by on."
+    },
+    {
+      "id": "impersonal_verbs",
+      "label": "Impersonal Verbs",
+      "category": "verbs",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["irregular_verbs", "present_tense"],
+      "description": "Verbs used only with il: il faut (must), il pleut (rains), il y a (there is/are)."
+    },
+    {
+      "id": "plus_que_parfait",
+      "label": "Plus-que-parfait",
+      "category": "tense",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["passe_compose", "imparfait", "auxiliary_verbs"],
+      "description": "Past perfect: action before another past action. Imparfait of auxiliary + past participle."
+    },
+    {
+      "id": "passe_simple",
+      "label": "Passé Simple",
+      "category": "tense",
+      "difficulty": 5,
+      "learning_priority": 5,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["imparfait", "passe_compose"],
+      "description": "Literary past tense. Rarely used in speech, common in literature."
+    },
+    {
+      "id": "adverbs",
+      "label": "Adverbs",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 2,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["adjectives", "verbs"],
+      "description": "Modify verbs, adjectives, or other adverbs. Often formed by adding -ment to feminine adjective."
+    },
+    {
+      "id": "adverb_placement",
+      "label": "Adverb Placement",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["adverbs", "word_order"],
+      "description": "Short adverbs (bien, mal, souvent) usually follow verb. Long adverbs can be more flexible."
+    },
+    {
+      "id": "double_negation",
+      "label": "Double Negation",
+      "category": "syntax",
+      "difficulty": 3,
+      "learning_priority": 3,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["negation"],
+      "description": "Ne...pas is required even with negative words: je ne vois personne (I see no one)."
+    },
+    {
+      "id": "participe_present",
+      "label": "Present Participle",
+      "category": "verbs",
+      "difficulty": 4,
+      "learning_priority": 4,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense", "verb_conjugation"],
+      "description": "Verb form ending in -ant. Used in gerund (en + present participle) or as adjective."
+    },
+    {
+      "id": "present_tense_er",
+      "label": "Present: -er verbs",
+      "category": "tense",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense"],
+      "description": "Conjugate -er verbs: je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent."
+    },
+    {
+      "id": "present_tense_ir",
+      "label": "Present: -ir verbs",
+      "category": "tense",
+      "difficulty": 2,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense_er"],
+      "description": "Conjugate -ir verbs: je finis, tu finis, il finit, nous finissons, vous finissez, ils finissent."
+    },
+    {
+      "id": "present_tense_etre_avoir",
+      "label": "Present: être & avoir",
+      "category": "tense",
+      "difficulty": 2,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["present_tense_er"],
+      "description": "Essential irregulars: je suis, j'ai, tu es, tu as, il est, il a..."
+    },
+    {
+      "id": "definite_articles_forms",
+      "label": "le, la, les",
+      "category": "articles",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["definite_articles"],
+      "description": "The three forms: le (masc), la (fem), les (plural)."
+    },
+    {
+      "id": "definite_articles_usage",
+      "label": "When to use 'the'",
+      "category": "articles",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["definite_articles_forms"],
+      "description": "Use le/la/les for specific nouns and general concepts (j'aime le café)."
+    },
+    {
+      "id": "subject_pronouns_list",
+      "label": "je, tu, il, elle...",
+      "category": "pronouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["subject_pronouns"],
+      "description": "The 8 subject pronouns: je, tu, il, elle, nous, vous, ils, elles."
+    },
+    {
+      "id": "subject_pronouns_tu_vous",
+      "label": "Tu vs vous",
+      "category": "pronouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["subject_pronouns_list"],
+      "description": "Tu = informal you, vous = formal or plural you."
+    },
+    {
+      "id": "negation_ne_pas",
+      "label": "ne...pas",
+      "category": "syntax",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["negation"],
+      "description": "Wrap the verb: Je ne parle pas. Ne becomes n' before a vowel."
+    },
+    {
+      "id": "negation_jamais_rien",
+      "label": "ne...jamais, ne...rien",
+      "category": "syntax",
+      "difficulty": 2,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["negation_ne_pas"],
+      "description": "Never: ne...jamais. Nothing: ne...rien."
+    },
+    {
+      "id": "nouns_basics",
+      "label": "What is a noun?",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns"],
+      "description": "Nouns name people, places, things. In French every noun has a gender."
+    },
+    {
+      "id": "nouns_gender_intro",
+      "label": "Nouns have gender",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["nouns_basics"],
+      "description": "Masculine or feminine. Learn words with le/la to remember."
+    },
+    {
+      "id": "gender_le_la",
+      "label": "le vs la",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": true,
+      "high_confusion_node": false,
+      "prerequisites": ["gender"],
+      "description": "Le = the (masc), la = the (fem). No rule—learn each word with its article."
+    },
+    {
+      "id": "number_plural_s",
+      "label": "Plurals: add -s",
+      "category": "nouns",
+      "difficulty": 1,
+      "learning_priority": 1,
+      "core_node": false,
+      "high_confusion_node": false,
+      "prerequisites": ["number"],
+      "description": "Most plurals: le livre → les livres, la table → les tables."
+    }
+  ],
+  "edges": [
+    {
+      "from": "nouns",
+      "to": "gender",
+      "relationship": "has_property"
+    },
+    {
+      "from": "nouns",
+      "to": "number",
+      "relationship": "has_property"
+    },
+    {
+      "from": "gender",
+      "to": "gender_agreement",
+      "relationship": "enables"
+    },
+    {
+      "from": "number",
+      "to": "number_agreement",
+      "relationship": "enables"
+    },
+    {
+      "from": "nouns",
+      "to": "definite_articles",
+      "relationship": "requires"
+    },
+    {
+      "from": "nouns",
+      "to": "indefinite_articles",
+      "relationship": "requires"
+    },
+    {
+      "from": "gender",
+      "to": "definite_articles",
+      "relationship": "determines"
+    },
+    {
+      "from": "gender",
+      "to": "indefinite_articles",
+      "relationship": "determines"
+    },
+    {
+      "from": "gender",
+      "to": "partitive_articles",
+      "relationship": "determines"
+    },
+    {
+      "from": "nouns",
+      "to": "adjectives",
+      "relationship": "modified_by"
+    },
+    {
+      "from": "adjectives",
+      "to": "adjective_agreement",
+      "relationship": "requires"
+    },
+    {
+      "from": "gender",
+      "to": "adjective_agreement",
+      "relationship": "determines"
+    },
+    {
+      "from": "number",
+      "to": "adjective_agreement",
+      "relationship": "determines"
+    },
+    {
+      "from": "adjectives",
+      "to": "adjective_placement",
+      "relationship": "has_property"
+    },
+    {
+      "from": "verbs",
+      "to": "verb_conjugation",
+      "relationship": "requires"
+    },
+    {
+      "from": "verb_conjugation",
+      "to": "regular_er_verbs",
+      "relationship": "includes"
+    },
+    {
+      "from": "verb_conjugation",
+      "to": "regular_ir_verbs",
+      "relationship": "includes"
+    },
+    {
+      "from": "verb_conjugation",
+      "to": "regular_re_verbs",
+      "relationship": "includes"
+    },
+    {
+      "from": "verb_conjugation",
+      "to": "irregular_verbs",
+      "relationship": "includes"
+    },
+    {
+      "from": "verbs",
+      "to": "present_tense",
+      "relationship": "has_form"
+    },
+    {
+      "from": "verb_conjugation",
+      "to": "present_tense",
+      "relationship": "creates"
+    },
+    {
+      "from": "present_tense",
+      "to": "present_tense_er",
+      "relationship": "includes"
+    },
+    {
+      "from": "present_tense_er",
+      "to": "present_tense_ir",
+      "relationship": "precedes"
+    },
+    {
+      "from": "present_tense_er",
+      "to": "present_tense_etre_avoir",
+      "relationship": "precedes"
+    },
+    {
+      "from": "definite_articles",
+      "to": "definite_articles_forms",
+      "relationship": "includes"
+    },
+    {
+      "from": "definite_articles_forms",
+      "to": "definite_articles_usage",
+      "relationship": "precedes"
+    },
+    {
+      "from": "subject_pronouns",
+      "to": "subject_pronouns_list",
+      "relationship": "includes"
+    },
+    {
+      "from": "subject_pronouns_list",
+      "to": "subject_pronouns_tu_vous",
+      "relationship": "precedes"
+    },
+    {
+      "from": "negation",
+      "to": "negation_ne_pas",
+      "relationship": "includes"
+    },
+    {
+      "from": "negation_ne_pas",
+      "to": "negation_jamais_rien",
+      "relationship": "precedes"
+    },
+    {
+      "from": "nouns",
+      "to": "nouns_basics",
+      "relationship": "includes"
+    },
+    {
+      "from": "nouns_basics",
+      "to": "nouns_gender_intro",
+      "relationship": "precedes"
+    },
+    {
+      "from": "gender",
+      "to": "gender_le_la",
+      "relationship": "includes"
+    },
+    {
+      "from": "number",
+      "to": "number_plural_s",
+      "relationship": "includes"
+    },
+    {
+      "from": "verbs",
+      "to": "passe_compose",
+      "relationship": "has_form"
+    },
+    {
+      "from": "auxiliary_verbs",
+      "to": "passe_compose",
+      "relationship": "required_for"
+    },
+    {
+      "from": "past_participle",
+      "to": "passe_compose",
+      "relationship": "required_for"
+    },
+    {
+      "from": "etre_auxiliary",
+      "to": "passe_compose",
+      "relationship": "used_in"
+    },
+    {
+      "from": "avoir_auxiliary",
+      "to": "passe_compose",
+      "relationship": "used_in"
+    },
+    {
+      "from": "gender_agreement",
+      "to": "passe_compose",
+      "relationship": "applies_to"
+    },
+    {
+      "from": "number_agreement",
+      "to": "passe_compose",
+      "relationship": "applies_to"
+    },
+    {
+      "from": "etre_auxiliary",
+      "to": "gender_agreement",
+      "relationship": "requires"
+    },
+    {
+      "from": "etre_auxiliary",
+      "to": "number_agreement",
+      "relationship": "requires"
+    },
+    {
+      "from": "reflexive_verbs",
+      "to": "etre_auxiliary",
+      "relationship": "requires"
+    },
+    {
+      "from": "reflexive_pronouns",
+      "to": "reflexive_verbs",
+      "relationship": "required_for"
+    },
+    {
+      "from": "verbs",
+      "to": "imparfait",
+      "relationship": "has_form"
+    },
+    {
+      "from": "present_tense",
+      "to": "imparfait",
+      "relationship": "precedes"
+    },
+    {
+      "from": "verbs",
+      "to": "future_simple",
+      "relationship": "has_form"
+    },
+    {
+      "from": "infinitive",
+      "to": "future_simple",
+      "relationship": "base_for"
+    },
+    {
+      "from": "verbs",
+      "to": "futur_proche",
+      "relationship": "has_form"
+    },
+    {
+      "from": "irregular_verbs",
+      "to": "futur_proche",
+      "relationship": "used_in"
+    },
+    {
+      "from": "verbs",
+      "to": "conditional",
+      "relationship": "has_form"
+    },
+    {
+      "from": "future_simple",
+      "to": "conditional",
+      "relationship": "similar_to"
+    },
+    {
+      "from": "imparfait",
+      "to": "conditional",
+      "relationship": "precedes"
+    },
+    {
+      "from": "verbs",
+      "to": "subjunctive",
+      "relationship": "has_form"
+    },
+    {
+      "from": "present_tense",
+      "to": "subjunctive",
+      "relationship": "precedes"
+    },
+    {
+      "from": "verbs",
+      "to": "imperative",
+      "relationship": "has_form"
+    },
+    {
+      "from": "present_tense",
+      "to": "imperative",
+      "relationship": "base_for"
+    },
+    {
+      "from": "subject_pronouns",
+      "to": "verb_conjugation",
+      "relationship": "determines"
+    },
+    {
+      "from": "sentence_structure",
+      "to": "word_order",
+      "relationship": "defines"
+    },
+    {
+      "from": "word_order",
+      "to": "direct_object_pronouns",
+      "relationship": "affects"
+    },
+    {
+      "from": "word_order",
+      "to": "indirect_object_pronouns",
+      "relationship": "affects"
+    },
+    {
+      "from": "word_order",
+      "to": "reflexive_pronouns",
+      "relationship": "affects"
+    },
+    {
+      "from": "direct_object_pronouns",
+      "to": "pronoun_order",
+      "relationship": "part_of"
+    },
+    {
+      "from": "indirect_object_pronouns",
+      "to": "pronoun_order",
+      "relationship": "part_of"
+    },
+    {
+      "from": "pronoun_y",
+      "to": "pronoun_order",
+      "relationship": "part_of"
+    },
+    {
+      "from": "pronoun_en",
+      "to": "pronoun_order",
+      "relationship": "part_of"
+    },
+    {
+      "from": "preposition_a",
+      "to": "pronoun_y",
+      "relationship": "replaced_by"
+    },
+    {
+      "from": "preposition_de",
+      "to": "pronoun_en",
+      "relationship": "replaced_by"
+    },
+    {
+      "from": "partitive_articles",
+      "to": "pronoun_en",
+      "relationship": "replaced_by"
+    },
+    {
+      "from": "sentence_structure",
+      "to": "questions",
+      "relationship": "modified_by"
+    },
+    {
+      "from": "word_order",
+      "to": "questions",
+      "relationship": "affects"
+    },
+    {
+      "from": "sentence_structure",
+      "to": "negation",
+      "relationship": "modified_by"
+    },
+    {
+      "from": "negation",
+      "to": "negation_pronouns",
+      "relationship": "extends_to"
+    },
+    {
+      "from": "passe_compose",
+      "to": "negation_pronouns",
+      "relationship": "affects"
+    },
+    {
+      "from": "pronoun_order",
+      "to": "negation_pronouns",
+      "relationship": "interacts_with"
+    },
+    {
+      "from": "prepositions",
+      "to": "preposition_a",
+      "relationship": "includes"
+    },
+    {
+      "from": "prepositions",
+      "to": "preposition_de",
+      "relationship": "includes"
+    },
+    {
+      "from": "definite_articles",
+      "to": "contractions",
+      "relationship": "part_of"
+    },
+    {
+      "from": "preposition_a",
+      "to": "contractions",
+      "relationship": "creates"
+    },
+    {
+      "from": "preposition_de",
+      "to": "contractions",
+      "relationship": "creates"
+    },
+    {
+      "from": "pronunciation",
+      "to": "liaison",
+      "relationship": "includes"
+    },
+    {
+      "from": "pronunciation",
+      "to": "elision",
+      "relationship": "includes"
+    },
+    {
+      "from": "definite_articles",
+      "to": "elision",
+      "relationship": "affected_by"
+    },
+    {
+      "from": "subject_pronouns",
+      "to": "elision",
+      "relationship": "affected_by"
+    },
+    {
+      "from": "verbs",
+      "to": "infinitive",
+      "relationship": "has_form"
+    },
+    {
+      "from": "prepositions",
+      "to": "infinitive",
+      "relationship": "followed_by"
+    },
+    {
+      "from": "verbs",
+      "to": "participe_present",
+      "relationship": "has_form"
+    },
+    {
+      "from": "participe_present",
+      "to": "gerund",
+      "relationship": "used_in"
+    },
+    {
+      "from": "preposition_de",
+      "to": "gerund",
+      "relationship": "used_in"
+    },
+    {
+      "from": "adjectives",
+      "to": "comparatives",
+      "relationship": "used_in"
+    },
+    {
+      "from": "adverbs",
+      "to": "comparatives",
+      "relationship": "used_in"
+    },
+    {
+      "from": "comparatives",
+      "to": "superlatives",
+      "relationship": "extends_to"
+    },
+    {
+      "from": "definite_articles",
+      "to": "superlatives",
+      "relationship": "required_for"
+    },
+    {
+      "from": "nouns",
+      "to": "possessive_adjectives",
+      "relationship": "modified_by"
+    },
+    {
+      "from": "gender",
+      "to": "possessive_adjectives",
+      "relationship": "determines"
+    },
+    {
+      "from": "nouns",
+      "to": "demonstrative_adjectives",
+      "relationship": "modified_by"
+    },
+    {
+      "from": "gender",
+      "to": "demonstrative_adjectives",
+      "relationship": "determines"
+    },
+    {
+      "from": "questions",
+      "to": "interrogative_pronouns",
+      "relationship": "uses"
+    },
+    {
+      "from": "interrogative_pronouns",
+      "to": "indirect_questions",
+      "relationship": "used_in"
+    },
+    {
+      "from": "conditional",
+      "to": "si_clauses",
+      "relationship": "used_in"
+    },
+    {
+      "from": "imparfait",
+      "to": "si_clauses",
+      "relationship": "used_in"
+    },
+    {
+      "from": "plus_que_parfait",
+      "to": "si_clauses",
+      "relationship": "used_in"
+    },
+    {
+      "from": "passe_compose",
+      "to": "plus_que_parfait",
+      "relationship": "precedes"
+    },
+    {
+      "from": "imparfait",
+      "to": "plus_que_parfait",
+      "relationship": "precedes"
+    },
+    {
+      "from": "auxiliary_verbs",
+      "to": "plus_que_parfait",
+      "relationship": "required_for"
+    },
+    {
+      "from": "past_participle",
+      "to": "plus_que_parfait",
+      "relationship": "required_for"
+    },
+    {
+      "from": "verbs",
+      "to": "adverbs",
+      "relationship": "modified_by"
+    },
+    {
+      "from": "adjectives",
+      "to": "adverbs",
+      "relationship": "related_to"
+    },
+    {
+      "from": "adverbs",
+      "to": "adverb_placement",
+      "relationship": "has_property"
+    },
+    {
+      "from": "word_order",
+      "to": "adverb_placement",
+      "relationship": "affects"
+    },
+    {
+      "from": "negation",
+      "to": "double_negation",
+      "relationship": "extends_to"
+    },
+    {
+      "from": "avoir_auxiliary",
+      "to": "gender_agreement",
+      "relationship": "requires_when"
+    },
+    {
+      "from": "direct_object_pronouns",
+      "to": "gender_agreement",
+      "relationship": "triggers"
+    },
+    {
+      "from": "avoir_auxiliary",
+      "to": "number_agreement",
+      "relationship": "requires_when"
+    },
+    {
+      "from": "direct_object_pronouns",
+      "to": "number_agreement",
+      "relationship": "triggers"
+    }
+  ]
+}
