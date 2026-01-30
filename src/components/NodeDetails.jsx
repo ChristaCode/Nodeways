@@ -2,7 +2,7 @@ import { getCEFRLevel, CEFR_LABELS } from '../utils/cefrMapping';
 import { isNodeCompleted, canLearnNode, getProgress, getRecommendedStartNodes, getRecommendedNextNodes } from '../utils/progress';
 import { hasLesson } from '../data/lessons';
 
-const NodeDetails = ({ node, graphData, onLearn, onUnlearn, onStartLesson, onSelectNode }) => {
+const NodeDetails = ({ node, graphData, selectedDomain, onLearn, onUnlearn, onStartLesson, onSelectNode }) => {
   if (!node) {
     const progress = getProgress();
     const startNodes = getRecommendedStartNodes(graphData?.nodes ?? [], 8);
@@ -128,6 +128,22 @@ const NodeDetails = ({ node, graphData, onLearn, onUnlearn, onStartLesson, onSel
         <div className="node-description">
           {node.description}
         </div>
+
+        {node.words && node.words.length > 0 && (
+          <div className="vocab-words-section">
+            <h4 className="vocab-words-title">Vocabulary ({node.words.length} words)</h4>
+            <div className="vocab-words-list-wrap">
+              <ul className="vocab-words-list">
+                {node.words.map((w, i) => (
+                  <li key={i} className="vocab-word-item">
+                    <span className="vocab-word-fr">{w.fr}</span>
+                    <span className="vocab-word-en">{w.en}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
 
         {node.core_node && (
           <div style={{ marginTop: '1rem' }}>

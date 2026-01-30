@@ -184,6 +184,7 @@ function BrainMapPage() {
           <NodeDetails
             node={selectedNode}
             graphData={graphData}
+            selectedDomain={selectedDomain}
             onLearn={handleLearn}
             onUnlearn={handleUnlearn}
             onStartLesson={handleStartLesson}

@@ -615,6 +615,58 @@
   transform: scale(1.02);
 }
 
+/* Vocabulary word list (vocab domain nodes with .words) */
+.vocab-words-section {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.vocab-words-title {
+  font-size: 0.95rem;
+  color: #334155;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.vocab-words-list-wrap {
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.vocab-words-list {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.vocab-word-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.vocab-word-item:last-child {
+  border-bottom: none;
+}
+
+.vocab-word-fr {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.vocab-word-en {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 1rem;
