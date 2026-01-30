@@ -162,7 +162,8 @@ const BrainMap = ({ graphData, selectedNode, onNodeClick, onNodeHover, selectedC
 
   return (
     <div className="brainmap-wrapper">
-      <ForceGraph2D
+      <div className="brainmap-canvas-buffer">
+        <ForceGraph2D
         ref={fgRef}
         graphData={filteredData()}
         nodeLabel={() => ''}
@@ -187,6 +188,7 @@ const BrainMap = ({ graphData, selectedNode, onNodeClick, onNodeHover, selectedC
         enablePanInteraction={true}
         enableZoomInteraction={true}
       />
+      </div>
     </div>
   );
 };

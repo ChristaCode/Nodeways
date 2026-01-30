@@ -235,7 +235,7 @@
   padding: 1rem;
   background: linear-gradient(145deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.12) 100%);
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.06);
 }
 
@@ -245,6 +245,13 @@
   position: relative;
   min-height: 420px;
   border-radius: 12px;
+  overflow: visible;
+}
+
+/* Extend canvas area so nodes/glow aren't clipped when zoomed in */
+.brainmap-canvas-buffer {
+  position: absolute;
+  inset: -40px;
 }
 
 .sidebar {
